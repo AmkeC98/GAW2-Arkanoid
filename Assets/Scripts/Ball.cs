@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
     // Movement Speed
     public float speed = 100.0f;
+    public GameObject playerBall;
 
     private void Start()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
+    }
+
+    private void Update()
+    {
+        if (playerBall.transform.position.y <= -150.0f)
+        {
+            PlayGameOver();
+        }
     }
 
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketWidth)
@@ -35,5 +45,10 @@ public class Ball : MonoBehaviour
             // Set Velocity with dir * speed
             GetComponent<Rigidbody2D>().velocity = dir * speed;
         }
+    }
+
+    private void PlayGameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
     }
 }
