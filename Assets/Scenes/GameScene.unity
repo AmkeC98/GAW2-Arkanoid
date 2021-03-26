@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 28316928}
   - component: {fileID: 28316931}
   - component: {fileID: 28316930}
-  - component: {fileID: 28316929}
   m_Layer: 0
   m_Name: block_red (8)
   m_TagString: Breakable
@@ -154,18 +153,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &28316929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28316927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &28316930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -253,7 +240,6 @@ GameObject:
   - component: {fileID: 36864085}
   - component: {fileID: 36864088}
   - component: {fileID: 36864087}
-  - component: {fileID: 36864086}
   m_Layer: 0
   m_Name: block_red (8)
   m_TagString: Breakable
@@ -275,18 +261,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &36864086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36864084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &36864087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -376,6 +350,8 @@ GameObject:
   - component: {fileID: 53033219}
   - component: {fileID: 53033223}
   - component: {fileID: 53033222}
+  - component: {fileID: 53033224}
+  - component: {fileID: 53033225}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -396,7 +372,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.5086174, y: 0.4977951}
   m_SpriteTilingProperty:
     border: {x: 0, y: 1, z: 1, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -407,7 +383,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 5}
+  m_Size: {x: 5, y: 4}
   m_EdgeRadius: 0
 --- !u!212 &53033220
 SpriteRenderer:
@@ -508,6 +484,116 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &53033224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53033218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc350c80d44f6b146ab56631e6f8038a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1037264340}
+  ball: {fileID: 53033218}
+--- !u!82 &53033225
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53033218}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 162c00936c4ea9842a04a743246aae35, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &131943319
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +605,6 @@ GameObject:
   - component: {fileID: 131943320}
   - component: {fileID: 131943323}
   - component: {fileID: 131943322}
-  - component: {fileID: 131943321}
   m_Layer: 0
   m_Name: block_red (6)
   m_TagString: Breakable
@@ -541,18 +626,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &131943321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131943319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &131943322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -640,7 +713,6 @@ GameObject:
   - component: {fileID: 137666982}
   - component: {fileID: 137666985}
   - component: {fileID: 137666984}
-  - component: {fileID: 137666983}
   m_Layer: 0
   m_Name: block_red (3)
   m_TagString: Breakable
@@ -662,18 +734,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &137666983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137666981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &137666984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -761,7 +821,6 @@ GameObject:
   - component: {fileID: 139189737}
   - component: {fileID: 139189740}
   - component: {fileID: 139189739}
-  - component: {fileID: 139189738}
   m_Layer: 0
   m_Name: block_red (4)
   m_TagString: Breakable
@@ -783,18 +842,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &139189738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139189736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &139189739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -882,7 +929,6 @@ GameObject:
   - component: {fileID: 152531604}
   - component: {fileID: 152531607}
   - component: {fileID: 152531606}
-  - component: {fileID: 152531605}
   m_Layer: 0
   m_Name: block_red (7)
   m_TagString: Breakable
@@ -904,18 +950,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &152531605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152531603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &152531606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1003,7 +1037,6 @@ GameObject:
   - component: {fileID: 215419962}
   - component: {fileID: 215419965}
   - component: {fileID: 215419964}
-  - component: {fileID: 215419963}
   m_Layer: 0
   m_Name: block_red (2)
   m_TagString: Breakable
@@ -1025,18 +1058,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215419963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215419961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &215419964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1157,7 +1178,6 @@ GameObject:
   - component: {fileID: 260920741}
   - component: {fileID: 260920744}
   - component: {fileID: 260920743}
-  - component: {fileID: 260920742}
   m_Layer: 0
   m_Name: block_red (8)
   m_TagString: Breakable
@@ -1179,18 +1199,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &260920742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260920740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &260920743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1278,7 +1286,6 @@ GameObject:
   - component: {fileID: 334302411}
   - component: {fileID: 334302414}
   - component: {fileID: 334302413}
-  - component: {fileID: 334302412}
   m_Layer: 0
   m_Name: block_red
   m_TagString: Breakable
@@ -1300,18 +1307,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &334302412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334302410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &334302413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1615,7 +1610,6 @@ GameObject:
   - component: {fileID: 497464180}
   - component: {fileID: 497464183}
   - component: {fileID: 497464182}
-  - component: {fileID: 497464181}
   m_Layer: 0
   m_Name: block_red (5)
   m_TagString: Breakable
@@ -1637,18 +1631,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &497464181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497464179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &497464182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1817,6 +1799,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1832,6 +1815,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc350c80d44f6b146ab56631e6f8038a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1037264340}
+  ball: {fileID: 53033218}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1900,7 +1897,6 @@ GameObject:
   - component: {fileID: 547582045}
   - component: {fileID: 547582048}
   - component: {fileID: 547582047}
-  - component: {fileID: 547582046}
   m_Layer: 0
   m_Name: block_red (8)
   m_TagString: Breakable
@@ -1922,18 +1918,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &547582046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547582044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &547582047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2021,7 +2005,6 @@ GameObject:
   - component: {fileID: 579860695}
   - component: {fileID: 579860698}
   - component: {fileID: 579860697}
-  - component: {fileID: 579860696}
   m_Layer: 0
   m_Name: block_red
   m_TagString: Breakable
@@ -2043,18 +2026,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &579860696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579860694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &579860697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2142,7 +2113,6 @@ GameObject:
   - component: {fileID: 583571906}
   - component: {fileID: 583571909}
   - component: {fileID: 583571908}
-  - component: {fileID: 583571907}
   m_Layer: 0
   m_Name: block_red (3)
   m_TagString: Breakable
@@ -2164,18 +2134,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &583571907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583571905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &583571908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2302,7 +2260,6 @@ GameObject:
   - component: {fileID: 689365539}
   - component: {fileID: 689365542}
   - component: {fileID: 689365541}
-  - component: {fileID: 689365540}
   m_Layer: 0
   m_Name: block_red (6)
   m_TagString: Breakable
@@ -2324,18 +2281,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &689365540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689365538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &689365541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2462,7 +2407,6 @@ GameObject:
   - component: {fileID: 706720812}
   - component: {fileID: 706720815}
   - component: {fileID: 706720814}
-  - component: {fileID: 706720813}
   m_Layer: 0
   m_Name: block_red (3)
   m_TagString: Breakable
@@ -2484,18 +2428,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &706720813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706720811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &706720814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2661,7 +2593,6 @@ GameObject:
   - component: {fileID: 747468992}
   - component: {fileID: 747468995}
   - component: {fileID: 747468994}
-  - component: {fileID: 747468993}
   m_Layer: 0
   m_Name: block_red (4)
   m_TagString: Breakable
@@ -2683,18 +2614,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &747468993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747468991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &747468994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2782,7 +2701,6 @@ GameObject:
   - component: {fileID: 749812637}
   - component: {fileID: 749812640}
   - component: {fileID: 749812639}
-  - component: {fileID: 749812638}
   m_Layer: 0
   m_Name: block_red (2)
   m_TagString: Breakable
@@ -2804,18 +2722,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &749812638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749812636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &749812639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2903,7 +2809,6 @@ GameObject:
   - component: {fileID: 787459891}
   - component: {fileID: 787459894}
   - component: {fileID: 787459893}
-  - component: {fileID: 787459892}
   m_Layer: 0
   m_Name: block_red (5)
   m_TagString: Breakable
@@ -2925,18 +2830,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &787459892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787459890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &787459893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3024,7 +2917,6 @@ GameObject:
   - component: {fileID: 823809246}
   - component: {fileID: 823809249}
   - component: {fileID: 823809248}
-  - component: {fileID: 823809247}
   m_Layer: 0
   m_Name: block_red (4)
   m_TagString: Breakable
@@ -3046,18 +2938,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &823809247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823809245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &823809248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3145,7 +3025,6 @@ GameObject:
   - component: {fileID: 830393020}
   - component: {fileID: 830393023}
   - component: {fileID: 830393022}
-  - component: {fileID: 830393021}
   m_Layer: 0
   m_Name: block_red (6)
   m_TagString: Breakable
@@ -3167,18 +3046,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &830393021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830393019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &830393022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3266,7 +3133,6 @@ GameObject:
   - component: {fileID: 858801728}
   - component: {fileID: 858801731}
   - component: {fileID: 858801730}
-  - component: {fileID: 858801729}
   m_Layer: 0
   m_Name: block_red (4)
   m_TagString: Breakable
@@ -3288,18 +3154,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &858801729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858801727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &858801730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3387,7 +3241,6 @@ GameObject:
   - component: {fileID: 877379112}
   - component: {fileID: 877379111}
   - component: {fileID: 877379110}
-  - component: {fileID: 877379109}
   m_Layer: 0
   m_Name: block_red
   m_TagString: Breakable
@@ -3395,18 +3248,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &877379109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877379108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &877379110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3607,7 +3448,6 @@ GameObject:
   - component: {fileID: 897166411}
   - component: {fileID: 897166414}
   - component: {fileID: 897166413}
-  - component: {fileID: 897166412}
   m_Layer: 0
   m_Name: block_red
   m_TagString: Breakable
@@ -3629,18 +3469,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &897166412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897166410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &897166413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3728,7 +3556,6 @@ GameObject:
   - component: {fileID: 963785926}
   - component: {fileID: 963785929}
   - component: {fileID: 963785928}
-  - component: {fileID: 963785927}
   m_Layer: 0
   m_Name: block_red (1)
   m_TagString: Breakable
@@ -3750,18 +3577,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963785927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963785925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &963785928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3874,7 +3689,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1037264340
 MonoBehaviour:
@@ -3890,7 +3705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3924,7 +3739,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037264338}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f82a193dbcc84d34bb3764cc0db1826e, type: 3}
   m_Name: 
@@ -3941,7 +3756,6 @@ GameObject:
   - component: {fileID: 1067956817}
   - component: {fileID: 1067956820}
   - component: {fileID: 1067956819}
-  - component: {fileID: 1067956818}
   m_Layer: 0
   m_Name: block_red (6)
   m_TagString: Breakable
@@ -3963,18 +3777,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1067956818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067956816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1067956819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4062,7 +3864,6 @@ GameObject:
   - component: {fileID: 1098509787}
   - component: {fileID: 1098509790}
   - component: {fileID: 1098509789}
-  - component: {fileID: 1098509788}
   m_Layer: 0
   m_Name: block_red (3)
   m_TagString: Breakable
@@ -4084,18 +3885,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1098509788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098509786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1098509789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4183,7 +3972,6 @@ GameObject:
   - component: {fileID: 1107653331}
   - component: {fileID: 1107653334}
   - component: {fileID: 1107653333}
-  - component: {fileID: 1107653332}
   m_Layer: 0
   m_Name: block_red (6)
   m_TagString: Breakable
@@ -4205,18 +3993,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1107653332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107653330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1107653333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4304,7 +4080,6 @@ GameObject:
   - component: {fileID: 1279580905}
   - component: {fileID: 1279580908}
   - component: {fileID: 1279580907}
-  - component: {fileID: 1279580906}
   m_Layer: 0
   m_Name: block_red (7)
   m_TagString: Breakable
@@ -4326,18 +4101,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1279580906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279580904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1279580907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4425,7 +4188,6 @@ GameObject:
   - component: {fileID: 1359704422}
   - component: {fileID: 1359704425}
   - component: {fileID: 1359704424}
-  - component: {fileID: 1359704423}
   m_Layer: 0
   m_Name: block_red (1)
   m_TagString: Breakable
@@ -4447,18 +4209,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1359704423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359704421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1359704424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4546,7 +4296,6 @@ GameObject:
   - component: {fileID: 1393948603}
   - component: {fileID: 1393948606}
   - component: {fileID: 1393948605}
-  - component: {fileID: 1393948604}
   m_Layer: 0
   m_Name: block_red (5)
   m_TagString: Breakable
@@ -4568,18 +4317,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1393948604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393948602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1393948605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4667,7 +4404,6 @@ GameObject:
   - component: {fileID: 1483317884}
   - component: {fileID: 1483317887}
   - component: {fileID: 1483317886}
-  - component: {fileID: 1483317885}
   m_Layer: 0
   m_Name: block_red (7)
   m_TagString: Breakable
@@ -4689,18 +4425,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1483317885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483317883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1483317886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4788,7 +4512,6 @@ GameObject:
   - component: {fileID: 1501384616}
   - component: {fileID: 1501384619}
   - component: {fileID: 1501384618}
-  - component: {fileID: 1501384617}
   m_Layer: 0
   m_Name: block_red (2)
   m_TagString: Breakable
@@ -4810,18 +4533,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1501384617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501384615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1501384618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4909,7 +4620,6 @@ GameObject:
   - component: {fileID: 1596071766}
   - component: {fileID: 1596071769}
   - component: {fileID: 1596071768}
-  - component: {fileID: 1596071767}
   m_Layer: 0
   m_Name: block_red (2)
   m_TagString: Breakable
@@ -4931,18 +4641,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1596071767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596071765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1596071768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5030,7 +4728,6 @@ GameObject:
   - component: {fileID: 1598588902}
   - component: {fileID: 1598588905}
   - component: {fileID: 1598588904}
-  - component: {fileID: 1598588903}
   m_Layer: 0
   m_Name: block_red (1)
   m_TagString: Breakable
@@ -5052,18 +4749,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1598588903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598588901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1598588904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5151,7 +4836,6 @@ GameObject:
   - component: {fileID: 1601308438}
   - component: {fileID: 1601308441}
   - component: {fileID: 1601308440}
-  - component: {fileID: 1601308439}
   m_Layer: 0
   m_Name: block_red (5)
   m_TagString: Breakable
@@ -5173,18 +4857,6 @@ Transform:
   m_Father: {fileID: 735561161}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1601308439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601308437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1601308440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5272,7 +4944,6 @@ GameObject:
   - component: {fileID: 1668544182}
   - component: {fileID: 1668544185}
   - component: {fileID: 1668544184}
-  - component: {fileID: 1668544183}
   m_Layer: 0
   m_Name: block_red (5)
   m_TagString: Breakable
@@ -5294,18 +4965,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668544183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668544181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1668544184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5393,7 +5052,6 @@ GameObject:
   - component: {fileID: 1677578087}
   - component: {fileID: 1677578090}
   - component: {fileID: 1677578089}
-  - component: {fileID: 1677578088}
   m_Layer: 0
   m_Name: block_red (7)
   m_TagString: Breakable
@@ -5415,18 +5073,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1677578088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677578086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1677578089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5514,7 +5160,6 @@ GameObject:
   - component: {fileID: 1701551930}
   - component: {fileID: 1701551933}
   - component: {fileID: 1701551932}
-  - component: {fileID: 1701551931}
   m_Layer: 0
   m_Name: block_red (4)
   m_TagString: Breakable
@@ -5536,18 +5181,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1701551931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701551929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1701551932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5635,7 +5268,6 @@ GameObject:
   - component: {fileID: 1706100203}
   - component: {fileID: 1706100206}
   - component: {fileID: 1706100205}
-  - component: {fileID: 1706100204}
   m_Layer: 0
   m_Name: block_red (3)
   m_TagString: Breakable
@@ -5657,18 +5289,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1706100204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706100202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1706100205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5756,7 +5376,6 @@ GameObject:
   - component: {fileID: 1749210484}
   - component: {fileID: 1749210487}
   - component: {fileID: 1749210486}
-  - component: {fileID: 1749210485}
   m_Layer: 0
   m_Name: block_red
   m_TagString: Breakable
@@ -5778,18 +5397,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1749210485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749210483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1749210486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6090,7 +5697,6 @@ GameObject:
   - component: {fileID: 1927117750}
   - component: {fileID: 1927117753}
   - component: {fileID: 1927117752}
-  - component: {fileID: 1927117751}
   m_Layer: 0
   m_Name: block_red (1)
   m_TagString: Breakable
@@ -6112,18 +5718,6 @@ Transform:
   m_Father: {fileID: 705056731}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1927117751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927117749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1927117752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6211,7 +5805,6 @@ GameObject:
   - component: {fileID: 1948200688}
   - component: {fileID: 1948200691}
   - component: {fileID: 1948200690}
-  - component: {fileID: 1948200689}
   m_Layer: 0
   m_Name: block_red (1)
   m_TagString: Breakable
@@ -6233,18 +5826,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1948200689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948200687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1948200690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6476,7 +6057,6 @@ GameObject:
   - component: {fileID: 1995000660}
   - component: {fileID: 1995000663}
   - component: {fileID: 1995000662}
-  - component: {fileID: 1995000661}
   m_Layer: 0
   m_Name: block_red (7)
   m_TagString: Breakable
@@ -6498,18 +6078,6 @@ Transform:
   m_Father: {fileID: 1880421990}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1995000661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995000659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1995000662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6597,7 +6165,6 @@ GameObject:
   - component: {fileID: 2044932736}
   - component: {fileID: 2044932739}
   - component: {fileID: 2044932738}
-  - component: {fileID: 2044932737}
   m_Layer: 0
   m_Name: block_red (2)
   m_TagString: Breakable
@@ -6619,18 +6186,6 @@ Transform:
   m_Father: {fileID: 675199087}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2044932737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044932735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2044932738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6718,7 +6273,6 @@ GameObject:
   - component: {fileID: 2091722236}
   - component: {fileID: 2091722239}
   - component: {fileID: 2091722238}
-  - component: {fileID: 2091722237}
   m_Layer: 0
   m_Name: block_red (8)
   m_TagString: Breakable
@@ -6740,18 +6294,6 @@ Transform:
   m_Father: {fileID: 719061647}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2091722237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091722235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba57aa5fc53b3574a9c6e918dce27ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2091722238
 BoxCollider2D:
   m_ObjectHideFlags: 0
